@@ -37,12 +37,12 @@ const Transaction = {
     App.reload();
   },
 
-  incomes() {
+  incomes(transaction) {
     let income = 0;
 
-    Transaction.all.forEach((transaction) => {
-      if (transaction.amount > 0) {
-        income += transaction.amount;
+    Transaction.all.forEach((item) => {
+      if (item.amount > 0) {
+        income += item.amount;
       }
     });
 
@@ -215,6 +215,9 @@ const Filtro = {
     const filtro = document.querySelector(".select").value;
     const ShowFiltro = [];
     validate = 0;
+    incomes = 0;
+    expenses = 0;
+    total = 0;
 
     const tt = Transaction.all.forEach((transaction, index) => {
       const splittedDate = transaction.date.split("/");
@@ -222,6 +225,14 @@ const Filtro = {
       if (Number(splittedDate[1]) == filtro) {
         DOM.clearTransactions();
         ShowFiltro.push({ transaction, index });
+
+        if (transaction.amount > 0) {
+          incomes += transaction.amount;
+        } else if (transaction.amount < 0) {
+          expenses += transaction.amount;
+        }
+        total += transaction.amount;
+
         validate = 1;
       }
     });
@@ -243,13 +254,32 @@ const Filtro = {
         tr.innerHTML = html;
         tr.dataset.index = item.index;
         DOM.transactionsContainer.appendChild(tr);
+
+        document.getElementById(
+          "incomeDisplay"
+        ).innerHTML = Utils.formatCurrency(incomes);
+
+        document.getElementById(
+          "expenseDisplay"
+        ).innerHTML = Utils.formatCurrency(expenses);
+
+        document.getElementById(
+          "totalDisplay"
+        ).innerHTML = Utils.formatCurrency(total);
+
+        if (total < 0) {
+          document.querySelector(".card.total").style.background = "#e92929";
+        } else {
+          document.querySelector(".card.total").style.background = "#49aa26";
+        }
+
         validate = 0;
       }
+    } else if (document.querySelector(".select").value == "all") {
+      App.init();
     } else {
+      alert("Nenhum informação encontrada");
       DOM.clearTransactions();
-    }
-
-    if (document.querySelector(".select").value == "all") {
       App.init();
     }
   },
