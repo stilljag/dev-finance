@@ -27,7 +27,7 @@ Esta aplicação foi desenvolvida durante a Maratona Discover da [Rocketseat][ro
 
 ## Desenvolvimento
 
-![VERSION](https://img.shields.io/badge/VERSION.1.0-blue) ![GitHub language count](https://img.shields.io/github/languages/count/stilljag/frontend-app-marvel?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/stilljag/frontend-app-marvel?style=flat-square)
+![VERSION](https://img.shields.io/badge/VERSION.1.0-blue) ![GitHub language count](https://img.shields.io/github/languages/count/stilljag/dev-finance?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/stilljag/dev-finance?style=flat-square)
 
 ##### 📍 Criação da versão 1.0
 
