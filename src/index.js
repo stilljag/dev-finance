@@ -214,16 +214,15 @@ const Filtro = {
   searchDate() {
     const filtro = document.querySelector(".select").value;
     const ShowFiltro = [];
+    validate = 0;
 
-    Transaction.all.forEach((transaction, index) => {
+    const tt = Transaction.all.forEach((transaction, index) => {
       const splittedDate = transaction.date.split("/");
 
       if (Number(splittedDate[1]) == filtro) {
         DOM.clearTransactions();
         ShowFiltro.push({ transaction, index });
         validate = 1;
-      } else {
-        validate = 0;
       }
     });
 
