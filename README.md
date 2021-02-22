@@ -1,6 +1,6 @@
 # Dev-Finance
 
-![HTML](https://img.shields.io/badge/HTML-orange) ![CSS](https://img.shields.io/badge/CSS-blue) [![The MIT License](https://img.shields.io/badge/LICENSE-MIT-green.svg?style=flat-square)](http://github.com/stilljag/dev-finance/blob/master/LICENSE.md)
+![HTML](https://img.shields.io/badge/HTML-orange) ![CSS](https://img.shields.io/badge/CSS-blue) ![JS](https://img.shields.io/badge/JS-yellow) [![The MIT License](https://img.shields.io/badge/LICENSE-MIT-green.svg?style=flat-square)](http://github.com/stilljag/dev-finance/blob/master/LICENSE.md)
 
 ## Aplicação
 
