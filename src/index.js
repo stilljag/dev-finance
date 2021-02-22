@@ -239,6 +239,7 @@ const Filtro = {
 
     if (validate == 1) {
       for (const item of ShowFiltro) {
+        ShowFiltro.sort(new Date(item.transaction.date));
         const CSSclass = item.transaction.amount > 0 ? "income" : "expense";
 
         const amount = Utils.formatCurrency(item.transaction.amount);

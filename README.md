@@ -31,7 +31,7 @@ Esta aplicação foi desenvolvida durante a Maratona Discover da [Rocketseat][ro
 
 ##### 📍 Criação da versão 1.0
 
-##### 📘 Estudar e implementar mais funcionalidades
+##### 📘 Foi implementando a funcionalidade de filtro por mês; card total ficou estilizado para cor vermelha com o saldo fica negativo.
 
 ---
 
